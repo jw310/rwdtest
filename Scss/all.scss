@@ -5,3 +5,23 @@
 //      -moz-box-sizing: border-box;
 //           box-sizing: border-box;
 // }
+
+
+//.col-sm-8 預設是寬度 100%，
+//是在任何的 media 中可視區 576px 以上，最大寬度改成 66.666667%;
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .col-sm-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+        }
+}
